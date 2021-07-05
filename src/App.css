@@ -16,7 +16,7 @@
 
 .child-div {
   text-align: center;
-  margin-top: 50px;
+  padding-top: 50px;
 }
 h1 {
   color: white;
@@ -77,15 +77,19 @@ button {
   font-size: 16px;
   color: #fff;
 }
-
-.fas fa-check {
+.todo-btn {
+  width: 80px;
+  display: flex;
+  justify-content: space-around;
+}
+.fas {
   cursor: pointer;
   pointer-events: auto;
   z-index: 10;
-  color: rgb(251, 251, 251);
+  color: black;
   -webkit-transition: color 0.15s linear;
   transition: color 0.15s linear;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .eachItem:hover h3 {
