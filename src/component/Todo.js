@@ -1,10 +1,20 @@
 import React,{useState,useEffect} from 'react';
 import '../App.css';
 
+//to get data
+const getLocalItems = () => {
+    let list = localStorage.getItem("lists");
+
+    if(list) {
+        return JSON.parse(localStorage.getItem('lists'));
+    }else {
+        return [];
+    }
+}
 
 const Todo = () => {
     const [inputData,setInputData] = useState("");
-    const [items,setItems] = useState([]);
+    const [items,setItems] = useState(getLocalItems());
     const [toggleSubmit,setToggleSubmit] = useState(true);
     const [isEditItem,setisEditItem] = useState(null);
 
